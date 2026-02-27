@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <style>
+        /* Fondo totalmente negro y cursor de texto */
+        body {
+            background-color: black;
+            color: black; /* Los textos por defecto son invisibles */
+            margin: 0;
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            height: 200vh; /* Altura extra para hacer scroll hacia el vacío */
+            cursor: default;
+        }
+
+        /* El mensaje principal en la esquina */
+        .main-text {
+            color: white; /* Este sí es visible */
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 1.2rem;
+            max-width: 300px;
+            text-align: right;
+            pointer-events: none; /* Para que no interfiera con la selección */
+        }
+
+        /* Los mensajes ocultos */
+        .hidden-messages {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            user-select: all; /* Facilita que el usuario los seleccione */
+        }
+
+        .help {
+            font-size: 1rem;
+            /* El color ya es negro por el body, así que son invisibles */
+        }
+
+        /* Estilo personalizado cuando el usuario selecciona el texto */
+        ::selection {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-text">
+        Someone is watching me, from afar, I can't do anything.
+    </div>
+
+    <div class="hidden-messages">
+        <div class="help">help</div>
+        <div class="help">help</div>
+        <div class="help">HELP ME</div>
+        <div class="help">help</div>
+        <div class="help">please help</div>
+        <div class="help">help</div>
+        <div class="help">they are here</div>
+        <div class="help">help</div>
+        <div class="help">help</div>
+        <div class="help">HELP</div>
+        <div class="help">help</div>
+        <div class="help">help</div>
+        <div class="help">...help...</div>
+        </div>
+
+</body>
+</html>
